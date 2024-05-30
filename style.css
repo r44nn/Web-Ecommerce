@@ -1,0 +1,479 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: white;
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 85px;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background-color: white;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo img {
+    padding: 5px;
+    width: 100px;
+    height: auto;
+}
+
+.navmenu {
+    display: flex;
+}
+
+.navmenu a {
+    color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navmenu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: darkgreen;
+    transition: width 0.3s ease;
+    transition-delay: 0.3s;
+}
+
+.navmenu a:hover::after {
+    width: 100%;
+    left: 0;
+    background: darkgreen;
+}
+
+.navmenu a:hover {
+    color: darkgreen;
+    transform: translateY(-2px);
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon i {
+    margin-right: 20px;
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-icon i:hover {
+    color: darkgreen;
+    transform: scale(1.1);
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.skip {
+    width: 100%;
+    height: 90px;
+}
+
+.center-text h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 55px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.left-sale h2{
+    font-size: 30px;
+    text-align: left;
+    margin-left: 49px;
+    margin-top: 55px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: darkred;
+}
+
+.produk {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.row {
+    background-color: white;
+    width: 320px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    border-radius: 15px; 
+    overflow: auto;
+}
+
+.row:hover {
+    transform: scale(0.9) translateY(-5px);
+    cursor: pointer;
+}
+
+.row img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+    align-self: center;
+}
+
+.rate {
+    margin-top: 10px;
+}
+
+.rate i {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.harga {
+    margin-top: 10px;
+}
+
+.harga h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    margin-left: 0.5rem;
+}
+
+.harga p {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    margin-left: 0.5rem;
+}
+
+.fetured-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    margin-top: 1rem;
+    padding: 40px;
+}
+
+.row_fetured {
+    width: 100%; 
+    overflow: auto; 
+    transition: all 0.3s ease;
+}
+
+.row_fetured:hover{
+    transform: scale(1.05);
+}
+
+.row_fetured img {
+    width: 100%;
+    height: auto;
+}
+
+.fea-text {
+    font-size: 60px;
+    text-align: end;
+}
+
+.fea-text h5 {
+    font-size: 19px;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.fea-text p {
+    color: #555;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.shoes-content {
+    display: flex;
+    gap: 9px;
+    padding: 40px;
+}
+
+.shoes {
+    width: 450px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.shoes-content img {
+    width: 100%;
+    height: auto;
+}
+
+.soe_text {
+    text-align: center;
+}
+
+.soe_text h4 {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.soe_text p {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    display: inline-block;
+    padding: 9px;
+    border: 1px solid black;
+    transition: all 0.3s ease;
+}
+
+.soe_text p:hover {
+    border-color: darkgreen;
+    transform: scale(1.05);
+}
+
+.flashsale-content{
+    display: flex;
+    justify-content: center;
+    padding: 45px;
+    gap: 9px;
+}
+
+.sale{
+    width: 310px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.sale img{
+    width: 100%;
+    height: auto;
+}
+.sale-text h4{
+    margin-left: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+.sale-text p{
+    margin-left: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.garis {
+    text-decoration: line-through;
+  }
+.red {
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+  }
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px 0;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: 1rem;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-left: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 1rem;
+}
+
+.footer-section ul li a:hover {
+    color: darkgreen;
+}
+
+.social-links a {
+    margin-right: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.social-links a:hover {
+    color: darkgreen;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        
+        height: auto;
+        padding: 15px 5%;
+    }
+
+    .navmenu {
+        display: flex;
+        
+    }
+
+    .navmenu a {
+        padding: 10px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .logo img {
+        padding: 5px;
+        width: 50px;
+        height: auto;
+    }
+    .nav-icon{
+        display: none;
+    }
+    .slider {
+        height: 300px;
+    }
+
+    .center-text h2,
+    .left-sale h2 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .produk {
+        padding: 20px;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .fetured-content {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .shoes-content {
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .shoes {
+        width: 100%;
+    }
+
+    .flashsale-content {
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 3rem;
+    }
+
+    .sale {
+        width: 100%;
+    }
+
+    .footer-container {
+        padding: 0 5%;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 1600px){
+    .slider {
+        max-width: 100%;
+    }
+
+    .shoes-content {
+        flex-direction: flex;
+        max-width: 100%;
+    }
+}
